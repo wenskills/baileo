@@ -1,0 +1,50 @@
+security:
+    password_hashers:
+        App\Entity\User:
+            algorithm: auto
+
+    providers:
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: email
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            lazy: true
+            provider: app_user_provider
+            stateless: true
+            # POST /api/auth/login : le firewall intercepte ce chemin,
+            # vérifie email/password et renvoie { token } via Lexik.
+            # (Sans ce bloc : "No route found for POST /api/auth/login")
+            # Anti-brute-force : 5 tentatives max par 15 min (par IP + par email)
+            login_throttling:
+                max_attempts: 5
+                interval: '15 minutes'
+            json_login:
+                check_path: /api/auth/login
+                username_path: email
+                password_path: password
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+            jwt: ~
+
+    access_control:
+        - { path: '^/api/health', roles: PUBLIC_ACCESS }
+        - { path: '^/api/follow/', roles: PUBLIC_ACCESS }
+        - { path: '^/api/auth',       roles: PUBLIC_ACCESS }
+        - { path: '^/api/onboarding', roles: IS_AUTHENTICATED_FULLY }
+        - { path: '^/api/annonces',   roles: PUBLIC_ACCESS }
+        - { path: '^/api',            roles: IS_AUTHENTICATED_FULLY }
+
+when@test:
+    security:
+        password_hashers:
+            Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface:
+                algorithm: auto
+                cost: 4
+                time_cost: 3
+                memory_cost: 10

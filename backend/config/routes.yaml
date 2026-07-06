@@ -1,0 +1,12 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+# Route du login : le firewall json_login (security.yaml) intercepte cette
+# requête AVANT que le controller ne s'exécute — mais le router doit connaître
+# le chemin, sinon il renvoie 404 avant même que le firewall ne s'active.
+api_login:
+    path: /api/auth/login
+    methods: POST

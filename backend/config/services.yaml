@@ -1,0 +1,44 @@
+parameters:
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+
+    App\Controller\Api\AuthController:
+        arguments:
+            $registerLimiter: '@limiter.register'
+
+    App\Controller\Api\PasswordController:
+        arguments:
+            $forgotPasswordLimiter: '@limiter.forgot_password'
+
+    App\Controller\Api\ApplicationController:
+        arguments:
+            $applyLimiter: '@limiter.apply'
+
+    App\Controller\Api\MessageController:
+        arguments:
+            $messageLimiter: '@limiter.message'
+
+    App\Controller\Api\PhotoController:
+        arguments:
+            $uploadDir: '%kernel.project_dir%/public/uploads'
+            $uploadUrl: '%env(APP_URL)%'
+
+    App\Controller\Api\DocumentController:
+        arguments:
+            $uploadDir: '%kernel.project_dir%/public/uploads'
+            $uploadUrl: '%env(APP_URL)%'
+
+    App\Controller\Api\PublicCampaignController:
+        arguments:
+            $uploadUrl:     '%env(APP_URL)%'
+            $publicLimiter: '@limiter.public_campaign'

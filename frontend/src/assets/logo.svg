@@ -1,0 +1,12 @@
+<svg viewBox="0 0 52 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Spine verticale -->
+  <rect x="0" y="0" width="10" height="64" fill="#1B4438"/>
+  <!-- D supérieur — vert foncé -->
+  <path d="M10 0 C10 0 44 0 44 16 C44 32 10 32 10 32 Z" fill="#1B4438"/>
+  <!-- D inférieur — vert émeraude -->
+  <path d="M10 30 C10 30 48 30 48 46 C48 64 10 64 10 64 Z" fill="#2C7A5E"/>
+  <!-- Porte blanche -->
+  <rect x="4" y="20" width="13" height="22" rx="2" fill="white"/>
+  <!-- Poignée -->
+  <circle cx="14.5" cy="32" r="1.8" fill="#1B4438"/>
+</svg>

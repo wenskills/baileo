@@ -1,0 +1,24 @@
+# Environnement
+backend/.env.local
+backend/.env.local.php
+frontend/.env
+
+# JWT
+backend/config/jwt/*.pem
+
+# Dépendances (regénérées par install)
+backend/vendor/
+frontend/node_modules/
+
+# Build
+backend/var/
+frontend/dist/
+frontend/.angular/
+
+# Uploads utilisateurs
+backend/public/uploads/*
+!backend/public/uploads/.gitkeep
+
+# OS / IDE
+.DS_Store
+.vscode/
