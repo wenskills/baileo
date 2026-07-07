@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
 
 /**
- * Notifications in-app (spec module 13).
+ * Notifications in-app.
  * Confidentialité : un utilisateur ne voit et ne modifie QUE ses propres notifications.
  */
 #[Route('/api/notifications')]
