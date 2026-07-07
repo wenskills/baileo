@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Uid\Uuid;
 
 /**
- * Décision formelle sur une candidature (spec : Decision Room).
+ * Décision formelle sur une candidature.
  * Le candidat reçoit UNIQUEMENT candidateMessage — internalReason
  * reste privée (jamais exposée, jamais opposable).
  */
