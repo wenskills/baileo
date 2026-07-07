@@ -18,11 +18,7 @@ use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Attribute\Route;
 
-/**
- * Action Center (spec) : « le propriétaire ne doit pas juste voir des listes,
- * il doit voir ce qui demande une ACTION ». Calculé à la volée — toujours
- * juste, zéro état désynchronisé, zéro cron.
- */
+
 #[Route('/api')]
 final class ActionCenterController extends AbstractController
 {
