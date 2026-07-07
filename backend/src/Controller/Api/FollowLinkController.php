@@ -19,7 +19,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
 
 /**
- * Suivi propriétaire (spec Wendy) : l'agence donne au PROPRIÉTAIRE RÉEL du
+ * Suivi propriétaire : l'agence donne au PROPRIÉTAIRE RÉEL du
  * bien un accès de suivi en lecture seule sur l'avancement de la mise en
  * location. Le lien expose UNIQUEMENT des compteurs et jalons — jamais
  * l'identité des candidats, jamais les notes internes.
