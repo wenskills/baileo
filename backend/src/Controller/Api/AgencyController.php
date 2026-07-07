@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
 
 /**
- * Vue globale agence (spec Wendy : « logiques plus denses ») :
+ * Vue globale agence :
  * toutes les candidatures de l'organisation, multi-campagnes,
  * PAGINÉES et filtrables (statut, campagne, assigné à moi).
  */
