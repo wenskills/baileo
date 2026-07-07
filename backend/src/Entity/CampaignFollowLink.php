@@ -7,8 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Uid\Uuid;
 
 /**
- * Lien de suivi pour le PROPRIÉTAIRE RÉEL du bien géré par une agence
- * (spec Wendy : transparence agence → propriétaire). Lecture seule,
+ * Lien de suivi pour le PROPRIÉTAIRE RÉEL du bien géré par une agence. Lecture seule,
  * compteurs et jalons UNIQUEMENT — jamais de données personnelles
  * des candidats (RGPD : minimisation).
  */
