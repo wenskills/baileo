@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Uid\Uuid;
 
 /**
- * Notification in-app (spec module 13).
+ * Notification in-app.
  * Un utilisateur ne voit QUE ses propres notifications (contrôlé dans le controller).
  */
 #[ORM\Entity]
