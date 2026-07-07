@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
 
 /**
- * Fiche ressenti après visite (spec Phase 2 — « Après la visite »).
+ * Fiche ressenti après visite.
  * STRICTEMENT PRIVÉE : jamais lisible par le candidat, sous aucune forme.
  * Le retour au candidat passe par un MESSAGE que le propriétaire choisit.
  */
